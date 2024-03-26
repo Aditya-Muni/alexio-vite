@@ -51,15 +51,15 @@ const AlexioState = ({ children }) => {
     async function fetchUser() {
       try {
         const response = await fetch(
-          "https://dashboard-backend.cyclic.app/api/v1/get/user/65b3a22c01d900e96c4219ae"
+          `https://dashboard-backend.cyclic.app/api/v1/get/user/65b3a22c01d900e96c4219ae`
         );
         const userData = await response.json();
         setUserData(userData);
+        console.log("api called");
       } catch (error) {
         console.error("Error fetching user data:", error);
       }
     }
-
     fetchUser();
   }, []);
 

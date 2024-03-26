@@ -7,9 +7,10 @@ import { useEffect, useState, Suspense, useContext } from "react";
 import HomeBanner from "./components/HomeBanner.jsx";
 import Contact from "./components/Contact.jsx";
 import Services from "./components/Services.jsx";
-import VideoPopup from "./components/popup/VideoPopup.jsx";
-import ImageView from "./components/popup/ImageView.jsx";
+// import VideoPopup from "./components/popup/VideoPopup.jsx";
+// import ImageView from "./components/popup/ImageView.jsx";
 import Preloader from "./Preloader.jsx";
+import Testimonials from "./components/Testimonials.jsx";
 
 function App() {
   const [PortfolioComponent, setPortfolioComponent] = useState(null); // Rename state variable
@@ -51,8 +52,8 @@ function App() {
       {!load && <Preloader />}
       {load1 && (
         <>
-          <VideoPopup />
-          <ImageView />
+          {/* <VideoPopup /> */}
+          {/* <ImageView /> */}
           <Nav />
           <div className={`pages-stack ${toggle ? "pages-stack--open" : ""}`}>
             <HomeBanner />
@@ -61,6 +62,7 @@ function App() {
             <Suspense fallback={<Preloader />}>
               {PortfolioComponent && <PortfolioComponent />}
             </Suspense>
+            <Testimonials />
             <Contact />
           </div>
           <Header />

@@ -6,9 +6,7 @@ import "./index.css";
 import AlexioState from "./Context";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <AlexioState>
-      <App />
-    </AlexioState>
-  </React.StrictMode>
+  <AlexioState>
+    <App />
+  </AlexioState>
 );

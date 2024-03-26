@@ -1,9 +1,5 @@
 import { useContext, useEffect, useState } from "react";
 import { AlexioContext } from "./Context";
-// import "./Nav.css";
-
-// import { useContext, useEffect, useState } from "react";
-// import { AlexioContext } from "./Context";
 
 const Nav = () => {
   const { changeNav, toggle, nav } = useContext(AlexioContext);
@@ -84,6 +80,14 @@ const Nav = () => {
           onClick={() => changeNav("portfolio", false)}
         >
           Portfolio
+        </a>
+      </div>
+      <div className="pages-nav__item">
+        <a
+          className="link link--page"
+          onClick={() => changeNav("testimonial", false)}
+        >
+          Testimonials
         </a>
       </div>
       <div className="pages-nav__item">
